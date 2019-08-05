@@ -1,0 +1,87 @@
+html {
+    font-size: 16px;
+}
+body {
+  background: #CB356B; 
+  background: -webkit-linear-gradient(to right, #BD3F32, #CB356B);
+  background: linear-gradient(to right, #BD3F32, #CB356B);
+}
+img {
+    max-width: 100%;
+}
+
+
+.title-main {
+    color: #fff;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.container {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
+.card {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 0px 15px 10px rgba(0,0,0,.15);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 100%;
+    overflow: hidden;
+    width: 20rem;
+}
+.card__image {
+
+}
+
+.card__name,
+.card__bredfor,
+.card__lifespan,
+.card__temperament {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+.card__name,
+.card__bredfor {
+    margin-bottom: .25rem;
+    text-transform: uppercase;
+}
+.card__name,
+.card__bredfor,
+.card__lifespan {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+.card__name {
+    color: #444;
+    font-weight: 800;   
+    line-height: 1em;
+    margin-top: 1rem;
+}
+.card__bredfor {
+    color: #444;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.card__lifespan {
+    color: #666;
+    font-size: .85rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.card__temperament {
+    color: #666;
+    margin-bottom: 2rem;
+}
