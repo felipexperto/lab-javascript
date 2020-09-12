@@ -1,26 +1,22 @@
-const uri = 'http://viacep.com.br/ws/';
+const BASE_URL = 'http://viacep.com.br/ws/';
 
-axios.get(uri+'SP/Sao Paulo/Antonio+Faria/json/')
-.then(function (resp) {
-    return resp.data.filter((p) => /rua/gi.exec(p.logradouro));
-}).then(function(resp) {
-    return resp.filter((p) => /jardim/gi.exec(p.bairro));
-}).then(function(resp) {
-    console.log(resp);
-});
-
-
-fetch(uri+'SP/Sao Paulo/Antonio+Faria/json/')
-.then(function(response) {
-    response.json()
+const getCEP = (adress) => {
+  fetch(uri+'SP/Sao Paulo/Flores/json/')
+  .then(function(response) {
+    response.json() // transforma a resposta em JSON
     .then(function (resp) {
-        return resp.filter((p) => /rua/gi.exec(p.logradouro));
+      console.log(resp); // exibe 50 resultados
+      return resp.filter((p) => /viela/gi.exec(p.logradouro)); // faz um filtro por endereços que tenham "Viela" no logradouro
     }).then(function(resp) {
-        return resp.filter((p) => /jardim/gi.exec(p.bairro));
+      console.log(resp); // exibe 5 resuldos
+      return resp.filter((p) => /jardim/gi.exec(p.bairro)); // aplica um filtro por bairros que tenham "Jardim" no nome
     }).then(function(resp) {
-        console.log(resp);
+      console.log(resp); // exibe 2 resultados
     });
-})
-.catch(function(err) {
+  })
+  .catch(function(err) {
     console.error(err);
-});
+  });
+}
+
+document.addEventListener('DOMContentLoaded', event => getCEP(`${BASE_URL}SP/Sao Paulo/Avenida Paulista/json/`));

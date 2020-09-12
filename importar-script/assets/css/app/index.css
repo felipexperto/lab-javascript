@@ -1,0 +1,49 @@
+.content {
+    background: #DA4453; 
+    background: -webkit-linear-gradient(to right, #89216B, #DA4453); 
+    background: linear-gradient(to right, #89216B, #DA4453);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.card {
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.12);
+    border: 0;
+    border-radius: .125rem;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    display: flex;
+    flex-direction: column;
+    font-size: .875rem;
+    font-weight: 400;
+    min-width: 0;
+    position: relative;
+    word-wrap: break-word;
+}
+.card {
+    position: absolute;
+    left: 50%;
+    max-width: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 18rem;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card h1.card-title, 
+.card h2.card-title, 
+.card h3.card-title, 
+.card h4.card-title, 
+.card h5.card-title, 
+.card h6.card-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
